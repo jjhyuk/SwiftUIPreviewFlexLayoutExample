@@ -19,11 +19,12 @@ class ViewController: UIViewController {
     .then {
       $0.image = UIImage(systemName: "star")
       $0.contentMode = .scaleAspectFit
+      $0.tintColor = .red
     }
   
   let idTextField = UITextField(frame: .zero)
     .then {
-      $0.placeholder = "아이디를 입력해주세요"
+      $0.placeholder = "Enter Your ID!"
       $0.layer.cornerRadius = 4
       $0.layer.borderColor = UIColor.lightGray.cgColor
       $0.layer.borderWidth = 1
@@ -33,7 +34,7 @@ class ViewController: UIViewController {
   
   let pwTextField = UITextField(frame: .zero)
     .then {
-      $0.placeholder = "비밀번호를 입력해주세요"
+      $0.placeholder = "Enter Your Password!"
       $0.layer.cornerRadius = 4
       $0.layer.borderColor = UIColor.lightGray.cgColor
       $0.layer.borderWidth = 1
@@ -44,7 +45,7 @@ class ViewController: UIViewController {
   
   let loginButton = UIButton(type: .custom)
     .then {
-      $0.setTitle("로그인", for: .normal)
+      $0.setTitle("Sign In!", for: .normal)
       $0.setTitleColor(.black, for: .normal)
       $0.layer.borderColor = UIColor.black.cgColor
       $0.layer.borderWidth = 1
@@ -53,7 +54,7 @@ class ViewController: UIViewController {
   
   let signUpButton = UIButton(type: .custom)
     .then {
-      let attr = NSAttributedString(string: "회원가입",
+      let attr = NSAttributedString(string: "Sign Up",
                                     attributes: [
                                       .underlineStyle : NSUnderlineStyle.single.rawValue,
                                       .font : UIFont.systemFont(ofSize: 15),
